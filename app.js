@@ -1,4 +1,4 @@
-
+// Constructors & the 'this' Keyword
 
 // Some of the most important aspects of Object Oriented programming is the Constructor and the 'this' key word.
  
@@ -39,3 +39,12 @@ function Person(name, dob) {
 
 const brad = new Person('brad', '9-10-1981');
 console.log(brad.CalculateAge());
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+// Built In Constructors
+
+// There are many other core objects that have contructors too in javaScript, but most of them are not advisable to use. Primative types like strings, numbers, and buleans can actually be created as objects, instaed of primatives. We can do this by using certain constuctors like string and number. However there more reasons to not use these constructors than there are to use them - For example it slows down execution speed, it involves more lines of code written down, can be confusing, can cause issues when using triple equals operator and your trying to compare the value and the type. Athoug we may not run into these constructors much, we see it down the road to lets familiarize ourselves. 
+
+// Here we set a primative value to a variable
+const name1 = 'Jeff';
