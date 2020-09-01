@@ -48,3 +48,47 @@ console.log(brad.CalculateAge());
 
 // Here we set a primative value to a variable
 const name1 = 'Jeff';
+// Here we creat this string above as an object
+const name2 = new String('Jeff');
+
+console.log(name1);
+
+// name2.foo = 'bar'; // We can add properties to the object (no real reason to but goog to know we can)
+// console.log(name2); // We get the same string but as an Object. (Primitive value as the key, and 'Jeff' as the value).
+
+// Where we can get ouselves into trouble with this type of built in constructors is when we are matching types for example...
+
+console.log(typeof name1);
+console.log(typeof name2); // Gives us an object, it is not a primative value.
+
+if (name2 === 'Jeff') { // with only == double equals, we get yes because we're only checking the checking the value, where === triple equals checks only the type which is a string as that's what it is when its surrounded in quotes. This is an example where you can run into some trouble when using built in constructors.
+    console.log('YES')
+} else {
+    console.log('NO')
+}; // The value of name2 is indeed 'Jeff' but the type which is what we are checking is actually not a string, but is an object. 
+
+// Number 
+const num1 = 5; // simple gives us a primitave number
+const num2 = new Number(5);
+
+console.log(typeof num1)
+console.log(typeof num2); // Gives us a number object, typeof also is object not number 
+
+// Boolean 
+const bool1 = true;
+const bool2 = new Boolean(true);
+
+console.log(typeof bool1)
+console.log(typeof bool2)
+
+// Function
+const getSum1 = function (x, y) {
+    return x + y;
+}
+console.log(getSum1(1, 1));
+
+const getSum2 = new Function('x', 'y', 'return x + y'); // third section represents whats inside the function body ('return x + y').
+
+console.log(getSum2(2, 3));
+
+
