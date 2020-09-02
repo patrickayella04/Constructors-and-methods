@@ -91,4 +91,18 @@ const getSum2 = new Function('x', 'y', 'return x + y'); // third section represe
 
 console.log(getSum2(2, 3));
 
+// Objects 
+const john1 = { name: 'John' };
+const john2 = new Object({ name: 'John' });
+console.log(john2);
 
+// Arrays
+const arr1 = [1, 2, 3, 4]
+const arr2 = new Array(1, 2, 3, 4);
+console.log(arr2)
+
+// RegXP constructor - Regular Expressions
+
+const re1 = /\w+/ // To create a regualr expression we wrap in two forward slashes and then put the exression in between. In this case, a Back Slash W. represents a word character with a plus - this expression means a 'word character that occurse one or more times'.
+const re2 = new RegExp('\\w+'); // we add a second back slash to escape the W character. Without doing so '\w+' our console log is /w+/, with back slash '\\w+' its log is \/w+\ which is the same result as the normal format in re1.
+console.log(re2);
